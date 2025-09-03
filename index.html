@@ -443,4 +443,224 @@
   </section>
 </body>
   </html>
-  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Book | Okewunmi Dynasty</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: url('love-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+      line-height: 1.7;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      color: gold;
+      font-size: 2.5em;
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .intro h2 {
+      color: #8b0000;
+      margin-bottom: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .scripture {
+      margin-top: 40px;
+      padding: 20px;
+      background: #fdf6e3;
+      border-left: 6px solid gold;
+      font-style: italic;
+      font-size: 1.1em;
+      text-align: center;
+      border-radius: 10px;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guest Book</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="family.html">Family Tree</a>
+      <a href="guestbook.html">Guest Book</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="intro">
+      <h2>We’d Love to Hear From You!</h2>
+      <p>Please leave your prayers, wishes, and kind words for the Okewunmi Dynasty.  
+      Your message is a gift that will be cherished forever.</p>
+    </div>
+
+    <!-- Google Form Embed -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeN1kMPPgv2iPpUVwLFEwgaz2ByBReTDfZK72zkHqggERIJkQ/viewform?embedded=true">
+      Loading…
+    </iframe>
+
+    <!-- Rotating Scripture Section -->
+    <div class="scripture" id="scripture-box">
+      “The Lord bless you and keep you; the Lord make His face shine on you and be gracious to you;  
+      the Lord turn His face toward you and give you peace.” – Numbers 6:24-26
+    </div>
+  </div>
+
+  <script>
+    const scriptures = [
+      "“The Lord bless you and keep you; the Lord make His face shine on you and be gracious to you; the Lord turn His face toward you and give you peace.” – Numbers 6:24-26",
+      "“As for me and my house, we will serve the Lord.” – Joshua 24:15",
+      "“Children are a heritage from the Lord, offspring a reward from Him.” – Psalm 127:3",
+      "“Love is patient, love is kind. It does not envy, it does not boast, it is not proud.” – 1 Corinthians 13:4",
+      "“But as for you, be strong and do not give up, for your work will be rewarded.” – 2 Chronicles 15:7"
+    ];
+
+    let index = 0;
+    function rotateScriptures() {
+      index = (index + 1) % scriptures.length;
+      document.getElementById("scripture-box").innerText = scriptures[index];
+    }
+    setInterval(rotateScriptures, 7000); // change every 7 seconds
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - The Okewunmi Family</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header, footer {
+      text-align: center;
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    .contact-info {
+      display: grid;
+      gap: 15px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .contact-info a {
+      display: inline-block;
+      text-decoration: none;
+      color: #0066cc;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    .contact-info a:hover {
+      color: #ff6600;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .map {
+      margin: 20px 0;
+    }
+    @media (max-width: 600px) {
+      .contact-info a {
+        font-size: 1rem;
+      }
+      iframe {
+        height: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact The Okewunmi Family</h1>
+  </header>
+
+  <div class="container">
+    <h2>We’d Love to Hear From You</h2>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <a href="mailto:okewunmitimileyin23@gmail.com">📧 Email: okewunmitimileyin23@gmail.com</a>
+      <a href="tel:+2349056658964">📞 Call: +234 905 665 8964</a>
+      <a href="https://www.facebook.com/PoetTimi" target="_blank">🌐 Facebook: PoetTimi</a>
+      <a href="https://youtube.com/@logosandrhema-f6w?si=aRQJfoV9oTVHTbGX" target="_blank">▶️ YouTube: Logos and Rhema</a>
+    </div>
+
+    <!-- Google Form -->
+    <h2>Send Us a Message</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeN1kMPPgv2iPpUVwLFEwgaz2ByBReTDfZK72zkHqggERIJkQ/viewform?embedded=true">
+      Loading…
+    </iframe>
+
+    <!-- Google Map -->
+    <h2>Our Address</h2>
+    <p style="text-align:center;">3, Adaranijo Close, Ipokia Street, off Agoro Road, Owode Otta, Ogun State, Nigeria</p>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps?q=3%20Adaranijo%20Close%20Ipokia%20Street%20Owode%20Otta%20Ogun%20State%20Nigeria&output=embed"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 The Okewunmi Family. All rights reserved.</p>
+  </footer>
+</body>
+</html>
