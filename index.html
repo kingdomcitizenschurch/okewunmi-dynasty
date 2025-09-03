@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Okewunmi Dynasty</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      color: white;
+      background: url('love.jpg') no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+    }
+    header {
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      color: gold;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: white;
+    }
+    .quotes {
+      margin-top: 100px;
+      font-size: 1.8em;
+      font-style: italic;
+      animation: fade 8s infinite;
+    }
+    @keyframes fade {
+      0% {opacity: 0;}
+      20% {opacity: 1;}
+      80% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+    footer {
+      margin-top: 100px;
+      padding: 20px;
+      background: rgba(0,0,0,0.7);
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Okewunmi Dynasty</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="family.html">Family</a>
+      <a href="guestbook.html">Guest Book</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="quotes" id="quoteBox">
+    <!-- Rotating Quotes will appear here -->
+  </section>
+
+  <footer>
+    <p>“But as for me and my household, we will serve the Lord.” – Joshua 24:15</p>
+    <p>&copy; 2025 Okewunmi Dynasty</p>
+  </footer>
+
+  <script>
+    const quotes = [
+      "Love is patient, love is kind. – 1 Corinthians 13:4",
+      "Train up a child in the way he should go. – Proverbs 22:6",
+      "Education is the most powerful weapon to change the world. – Nelson Mandela",
+      "The fear of the Lord is the beginning of wisdom. – Proverbs 9:10",
+      "Family is the compass that guides us. – Unknown"
+    ];
+
+    let index = 0;
+    function showQuote() {
+      document.getElementById('quoteBox').innerText = quotes[index];
+      index = (index + 1) % quotes.length;
+    }
+    setInterval(showQuote, 5000);
+    showQuote();
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Okewunmi Dynasty</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: url('love-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+      line-height: 1.7;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      color: gold;
+      font-size: 2.5em;
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .person {
+      margin-bottom: 40px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .person img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid gold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .person h2 {
+      margin: 0;
+      color: #8b0000;
+    }
+    .person p {
+      margin-top: 10px;
+      font-size: 1.05em;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About the Okewunmi Dynasty</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="family.html">Family Tree</a>
+      <a href="guestbook.html">Guest Book</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Welcome to the Okewunmi Dynasty</h2>
+    <p>
+      The Okewunmi Dynasty is a family rooted in truth, sacrifice, faith, and legacy. At the heart of this great family is Elder Solomon Okewunmi, a man widely respected for his integrity, wisdom, and selfless devotion. Born and raised in Ogun State, Egba, Abeokuta—Itori Oke, Elder Solomon has lived his life as a shining example of what it means to serve both family and community with unwavering commitment.
+    </p>
+    <p>
+      Now at the age of 71 (in 2025), Elder Solomon continues to stand as a pillar of strength and guidance. He is known for his truthfulness, his sacrificial nature, and his uncommon dedication to the welfare of his children and grandchildren. Through his foresight and discipline, he ensured that his children received a solid foundation in education, equipping them to excel in life and contribute meaningfully to society.
+    </p>
+    <p>
+      By his side is his beloved wife, Deaconess Adebola Okewunmi, a virtuous woman and nurturing mother of many. Hailing from Ita Morning in Abeokuta, she embodies grace, compassion, and deep spirituality. As a devoted wife, mother, and woman of faith, she has played a central role in building the strong moral and spiritual backbone of the family.
+    </p>
+    <p>
+      Together, Elder Solomon and Deaconess Adebola have established a home where love, respect, discipline, and godliness are deeply valued. The Okewunmi Dynasty is not just about bloodline, but about heritage, values, and impact—a family known for its resilience, unity, and strong connection to its roots.
+    </p>
+
+    <!-- Parents -->
+    <div class="person">
+      <img src="solomon.jpg" alt="Elder Solomon Okewunmi">
+      <div>
+        <h2>Elder Solomon Okewunmi</h2>
+        <p>A man of integrity, wisdom, and sacrifice. The pillar of the Okewunmi Dynasty.</p>
+      </div>
+    </div>
+
+    <div class="person">
+      <img src="adebola.jpg" alt="Deaconess Adebola Okewunmi">
+      <div>
+        <h2>Deaconess Adebola Okewunmi</h2>
+        <p>A virtuous wife, mother, and woman of faith. The nurturing strength of the family.</p>
+      </div>
+    </div>
+
+    <h2>The Okewunmi Children</h2>
+
+    <!-- Damilola -->
+    <div class="person">
+      <img src="damilola.jpg" alt="Oshode Damilola">
+      <div>
+        <h2>Oshode Damilola (née Mama Oshode)</h2>
+        <p>The firstborn of the family, Damilola, stands as a model of resilience, wisdom, and industriousness. 
+        A graduate of Computer Science from Ire Ekiti Polytechnic, she has used her academic knowledge and 
+        entrepreneurial spirit to carve a niche for herself in the business world. Today, she is a business mogul 
+        known for her expertise in the sales of quality leather materials across the state. Her dedication, 
+        persistence, and business acumen have made her a household name in her field.</p>
+        <p>Damilola is happily married to Mr. Oshode Damilare, a professional accountant of integrity and excellence. 
+        Their union is blessed with two lovely children, Ademide and Iremide. As the firstborn, Damilola remains a 
+        strong pillar of encouragement and inspiration to her siblings.</p>
+      </div>
+    </div>
+
+    <!-- Ayomide -->
+    <div class="person">
+      <img src="ayomide.jpg" alt="Engr. Okewunmi Ayomide">
+      <div>
+        <h2>Engr. Okewunmi Ayomide</h2>
+        <p>The second-born and the first son, Ayomide, carries the strength, vision, and resilience that characterize 
+        the Okewunmi name. A skilled engineer, he has specialized in the repair and maintenance of heavy-duty machines. 
+        Through hard work and determination, he has distinguished himself in his profession, earning respect among 
+        colleagues and clients alike.</p>
+        <p>He is married to Simisola Okewunmi, and together they are blessed with a handsome son, Simon Okewunmi. 
+        As the first son, Ayomide serves as both protector and motivator to his siblings.</p>
+      </div>
+    </div>
+
+    <!-- Oluwagbenga -->
+    <div class="person">
+      <img src="oluwagbenga.jpg" alt="Okewunmi Oluwagbenga">
+      <div>
+        <h2>Okewunmi Oluwagbenga</h2>
+        <p>The third-born, Oluwagbenga, embodies the entrepreneurial creativity of the Okewunmi family. With a passion 
+        for style and innovation, he has ventured into the shoe and fashion industry, where his designs and business 
+        ideas continue to flourish. His boldness and creativity have allowed him to set himself apart as a businessman 
+        who blends tradition with modern trends.</p>
+      </div>
+    </div>
+
+    <!-- Opeyemi -->
+    <div class="person">
+      <img src="opeyemi.jpg" alt="Okewunmi Opeyemi">
+      <div>
+        <h2>Okewunmi Opeyemi (Mrs. Mathew)</h2>
+        <p>The fourth-born, Opeyemi, is a woman of elegance, intelligence, and godliness. She began her academic journey 
+        at the Yaba College of Education, and later pursued her degree at the University of Lagos. She has grown into 
+        a thriving businesswoman in the fabric and textile industry, where she is recognized for her excellence and integrity.</p>
+        <p>She is happily married to Pastor Mathew, and together they are raising a godly family.</p>
+      </div>
+    </div>
+
+    <!-- Abayomi -->
+    <div class="person">
+      <img src="abayomi.jpg" alt="Pastor Okewunmi Abayomi">
+      <div>
+        <h2>Pastor Okewunmi Abayomi (Yomi)</h2>
+        <p>The fifth-born, fondly called Yomi, stands out as both a scholar and a minister of the Gospel. He graduated 
+        with Distinction in Insurance from The Polytechnic Ibadan, and later achieved First-Class honors from the 
+        University of Ibadan—a testament to his brilliance and discipline.</p>
+        <p>Today, Yomi serves as a Senior Pastor at Salvation Proclaimers Anointed Church, Ibadan Headquarters, and is also 
+        the founder of Edu Top Consultant, as well as a lecturer at The Polytechnic Ibadan. He is happily married to 
+        Dr. (Mrs.) Kehinde Okewunmi, and together they are blessed with a son.</p>
+      </div>
+    </div>
+
+    <!-- Motunrayo -->
+    <div class="person">
+      <img src="motunrayo.jpg" alt="Okewunmi Motunrayo">
+      <div>
+        <h2>Okewunmi Motunrayo (Mrs. Lucky Aba)</h2>
+        <p>The sixth-born, Motunrayo, is a shining example of beauty, talent, and versatility. A graduate of Adekunle 
+        Ajasin University and a trained Laboratory Scientist, she has gone beyond her professional career to make her 
+        mark as a fashionista, NGO founder, minister, and entrepreneur. She is happily married to Mr. Lucky Aba, and 
+        their home is blessed with a son.</p>
+      </div>
+    </div>
+
+    <!-- Timileyin -->
+    <div class="person">
+      <img src="timileyin.jpg" alt="Okewunmi Timileyin">
+      <div>
+        <h2>Okewunmi Timileyin</h2>
+        <p>The seventh-born, Timileyin, is a man of intellect, creativity, and vision, whose pursuits cut across 
+        education, technology, literature, and ministry. A graduate of Counseling Psychology from Olabisi Onabanjo 
+        University, he is the founder of Triangle of Scholars, and also the creative mind behind Logos and Rhema 
+        YouTube channel.</p>
+        <p>He is a cybersecurity graduate, software developer, and Media Director of Kingdom Citizens Church International. 
+        Though unmarried, he is in a promising relationship.</p>
+      </div>
+    </div>
+
+    <!-- Pelumi -->
+    <div class="person">
+      <img src="pelumi.jpg" alt="Okewunmi Pelumi Paul">
+      <div>
+        <h2>Okewunmi Pelumi Paul</h2>
+        <p>The last-born of the family, Pelumi Paul, is a powerhouse of vision, innovation, and determination. 
+        Currently a law student at Kola Daisi University, he is also a tech-driven businessman, Amazon affiliate 
+        marketer, writer, poet, and motivational speaker. Known as the youngest motivational speaker in Africa, 
+        he has inspired countless lives through Upphillan TV and continues to build his legacy.</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Okewunmi Dynasty - Family Tree</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('love.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      background: rgba(0,0,0,0.7);
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    nav a {
+      color: #ffd700;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1, h2 {
+      color: #ffd700;
+      text-shadow: 1px 1px 2px #000;
+    }
+    .family-section {
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 1100px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .person {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+    .person:hover {
+      transform: scale(1.05);
+    }
+    .person img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffd700;
+    }
+    .person h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+      color: #ffd700;
+    }
+    .person p {
+      font-size: 14px;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Okewunmi Dynasty Family Tree
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="family.html">Family Tree</a>
+      <a href="guestbook.html">Guest Book</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Parents -->
+  <section class="family-section">
+    <h2>Our Beloved Parents</h2>
+    <div class="grid">
+      <div class="person">
+        <img src="solomon.jpg" alt="Elder Solomon Okewunmi">
+        <h3>Elder Solomon Okewunmi</h3>
+        <p>Father of the Dynasty</p>
+      </div>
+      <div class="person">
+        <img src="adebola.jpg" alt="Deaconess Adebola Okewunmi">
+        <h3>Deaconess Adebola Okewunmi</h3>
+        <p>Mother of the Dynasty</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Children -->
+  <section class="family-section">
+    <h2>The Children</h2>
+    <div class="grid">
+      <div class="person"><img src="damilola.jpg" alt="Damilola"><h3>Damilola</h3></div>
+      <div class="person"><img src="ayomide.jpg" alt="Ayomide"><h3>Ayomide</h3></div>
+      <div class="person"><img src="abayomi.jpg" alt="Abayomi"><h3>Abayomi</h3></div>
+      <div class="person"><img src="motunrayo.jpg" alt="Motunrayo"><h3>Motunrayo</h3></div>
+      <div class="person"><img src="timileyin.jpg" alt="Timileyin"><h3>Timileyin</h3></div>
+      <div class="person"><img src="oluwagbemi.jpg" alt="Oluwagbemi"><h3>Oluwagbemi</h3></div>
+      <div class="person"><img src="oluwatobiloba.jpg" alt="Oluwatobiloba"><h3>Oluwatobiloba</h3></div>
+      <div class="person"><img src="emmanuel.jpg" alt="Emmanuel"><h3>Emmanuel</h3></div>
+    </div>
+  </section>
+
+  <!-- Grandchildren -->
+  <section class="family-section">
+    <h2>The Grandchildren</h2>
+    <div class="grid">
+      <div class="person"><img src="ademide.jpg" alt="Ademide"><h3>Oshode Ademide</h3><p>Child of Damilola</p></div>
+      <div class="person"><img src="iremide.jpg" alt="Iremide"><h3>Oshode Iremide</h3><p>Child of Damilola</p></div>
+      <div class="person"><img src="simon.jpg" alt="Simon"><h3>Okewunmi Simon</h3><p>Child of Ayomide</p></div>
+      <div class="person"><img src="kanen.jpg" alt="Kanen"><h3>Okewunmi Kanen</h3><p>Child of Abayomi</p></div>
+      <div class="person"><img src="oreoluwa.jpg" alt="Oreoluwa"><h3>Aba Oreoluwa</h3><p>Child of Motunrayo</p></div>
+    </div>
+  </section>
+</body>
+  </html>
+  
