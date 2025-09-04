@@ -1,128 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solomon Okewunmi Family</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-  
-  body {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    overflow-x: hidden;
-  }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solomon Okewunmi Family</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
-  header {
-    text-align: center;
-    padding: 30px 10px;
-    background: rgba(0,0,0,0.6);
-  }
+    :root{
+      --gold:#ffd700;
+      --burgundy:#8b0000;
+      --royal:#0b2e59;
+      --ink:#111;
+      --ivory:#fffdf7;
+      --shadow:0 10px 30px rgba(0,0,0,.25);
+      --blue:#1e90ff;
+      --purple:#800080;
+      --red:#ff0000;
+    }
 
-  header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3em;
-    font-weight: bold;
-    color: gold;
-    margin: 0;
-  }
+    *{box-sizing:border-box}
+    body{margin:0;font-family: "Georgia", serif;background:#000;color:#fff}
 
-  nav {
-    margin-top: 15px;
-  }
+    /* Header */
+    header{
+      position:fixed;top:0;left:0;right:0;z-index:50;
+      backdrop-filter: blur(6px);
+      background:linear-gradient(90deg, rgba(0,0,0,.65), rgba(0,0,0,.35));
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 18px;
+    }
+    .brand{
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
+      font-weight: 700;
+      letter-spacing:.5px;
+      color: var(--gold);
+      text-decoration:none;
+    }
+    .links a{
+      color:#eee;text-decoration:none;margin:0 10px;font-weight:600;
+      transition: color 0.3s;
+    }
+    .links a:hover{color:var(--gold)}
 
-  nav a {
-    color: #ffd700;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    font-size: 1.1em;
-  }
+    /* Hero Slider */
+    .hero{
+      height:100svh; /* mobile-friendly full screen */
+      position:relative;overflow:hidden;display:grid;place-items:center;
+    }
+    .slide{
+      position:absolute;inset:0;display:grid;place-items:center;
+      opacity:0;transition:opacity .8s ease;
+      background-size:cover;background-position:center;
+      color:#fff;text-align:center;
+      padding:0 12px;
+    }
+    .slide.active{opacity:1}
+    .overlay{
+      position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.65));
+    }
+    .content{
+      position:relative;z-index:2;max-width:1000px;margin:0 16px;text-align:center;
+      animation: floatIn .8s ease both;
+    }
 
-  nav a:hover {
-    color: #fff;
-  }
+    /* Headline above scriptures */
+    .headline{
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight:bold;
+      margin-bottom:16px;
+      color: var(--purple);
+      text-shadow: 2px 2px 12px rgba(0,0,0,.7);
+    }
 
-  /* Sliding scripture carousel */
-  .carousel-container {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    overflow: hidden;
-  }
+    .verse{
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      line-height:1.5;
+      text-shadow: 2px 2px 6px #000;
+      color: var(--blue);
+    }
 
-  .carousel-slide {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0; left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    text-shadow: 2px 2px 6px #000;
-    padding: 0 20px;
-    text-align: center;
-    transition: opacity 1s ease-in-out;
-  }
+    .badge{
+      display:inline-block;margin-top:18px;padding:10px 16px;border-radius:999px;
+      background:rgba(255,215,0,.15);border:1px solid rgba(255,215,0,.35);color:var(--gold);
+      font-weight:700;backdrop-filter: blur(4px)
+    }
 
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.7);
-    color: #fff;
-  }
+    @keyframes floatIn{
+      from{transform:translateY(12px);opacity:0}
+      to{transform:translateY(0);opacity:1}
+    }
 
-  @media(max-width:768px) {
-    header h1 { font-size: 2em; }
-    nav a { font-size: 1em; }
-    .carousel-slide { font-size: 1.5em; }
-  }
+    /* Footer */
+    footer{
+      background:#0c0c0c;color:#ddd;text-align:center;padding:28px 16px;border-top:1px solid rgba(255,255,255,.08)
+    }
 
-  @media(max-width:480px) {
-    header h1 { font-size: 1.5em; }
-    .carousel-slide { font-size: 1.2em; }
-  }
-</style>
+    /* Mobile nav wrap */
+    @media (max-width:720px){
+      .links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+      .links a{margin:0 6px}
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="index.html">Solomon Okewunmi Family</a>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="family.html">Family</a>
+        <a href="guestbook.html">Guest Book</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <h1>Solomon Okewunmi Family</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="family.html">Family Tree</a>
-    <a href="guestbook.html">Guest Book</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <main class="hero" aria-live="polite">
+    <div class="overlay" aria-hidden="true"></div>
+    <div id="slides"></div>
+    <div class="content">
+      <div class="headline">Solomon Okewunmi Family</div>
+      <div id="verse" class="verse">Loading…</div>
+      <div class="badge">“A legacy of love, truth & faith.”</div>
+    </div>
+  </main>
 
-<section class="carousel-container">
-  <div class="carousel-slide" style="background-image:url('bible1.jpg');">“Love is patient, love is kind. – 1 Corinthians 13:4”</div>
-  <div class="carousel-slide" style="background-image:url('bible2.jpg'); opacity:0;">“Train up a child in the way he should go. – Proverbs 22:6”</div>
-  <div class="carousel-slide" style="background-image:url('bible3.jpg'); opacity:0;">“The fear of the Lord is the beginning of wisdom. – Proverbs 9:10”</div>
-  <div class="carousel-slide" style="background-image:url('bible4.jpg'); opacity:0;">“Family is the compass that guides us. – Unknown”</div>
-</section>
+  <footer>
+    “But as for me and my household, we will serve the Lord.” — Joshua 24:15<br/>
+    &copy; 2025 Solomon Okewunmi Family
+  </footer>
 
-<footer>
-  &copy; 2025 Solomon Okewunmi Family. All rights reserved.
-</footer>
+  <script>
+    const slidesData = [
+      { text: "“Love is patient, love is kind.” — 1 Corinthians 13:4", bg: "url('bible1.jpg')" },
+      { text: "“Train up a child in the way he should go.” — Proverbs 22:6", bg: "url('bible2.jpg')" },
+      { text: "“The fear of the Lord is the beginning of wisdom.” — Proverbs 9:10", bg: "url('bible3.jpg')" },
+      { text: "“Children are a heritage from the Lord.” — Psalm 127:3", bg: "url('bible4.jpg')" },
+      { text: "“Family is the compass that guides us.” — Unknown", bg: "url('bible5.jpg')" }
+    ];
 
-<script>
-  const slides = document.querySelectorAll('.carousel-slide');
-  let current = 0;
-  function nextSlide() {
-    slides[current].style.opacity = 0;
-    current = (current+1) % slides.length;
-    slides[current].style.opacity = 1;
-  }
-  setInterval(nextSlide, 7000); // Slide every 7 seconds
-</script>
+    const slidesHost = document.getElementById('slides');
+    const verseBox = document.getElementById('verse');
 
+    slidesData.forEach((s,i)=>{
+      const d=document.createElement('div');
+      d.className='slide'+(i===0?' active':'');
+      d.style.background=s.bg;
+      slidesHost.appendChild(d);
+    });
+
+    let idx=0;
+    function show(i){
+      document.querySelectorAll('.slide').forEach(el=>el.classList.remove('active'));
+      document.querySelectorAll('.slide')[i].classList.add('active');
+      verseBox.textContent=slidesData[i].text;
+    }
+    function next(){ idx=(idx+1)%slidesData.length; show(idx); }
+    show(0);
+    setInterval(next,6000);
+  </script>
 </body>
 </html>
