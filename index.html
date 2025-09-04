@@ -167,3 +167,308 @@
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - Okewunmi Dynasty</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+    :root{
+      --gold:#ffd700;
+      --burgundy:#8b0000;
+      --royal:#0b2e59;
+      --blue:#1e90ff;
+      --purple:#800080;
+      --red:#ff0000;
+      --bg-dark:#111;
+      --bg-light:#f8f8f8;
+    }
+
+    *{box-sizing:border-box}
+    body{margin:0;font-family: "Georgia", serif;background:var(--bg-dark);color:#fff;line-height:1.6;}
+
+    header{
+      position:fixed;top:0;left:0;right:0;z-index:50;
+      backdrop-filter: blur(6px);
+      background:linear-gradient(90deg, rgba(0,0,0,.65), rgba(0,0,0,.35));
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav{
+      max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 18px;
+    }
+
+    .brand{
+      font-family: 'Playfair Display', serif;
+      font-weight:700;
+      font-size:1.6em;
+      letter-spacing:.5px;
+      color:var(--gold);
+      text-decoration:none;
+    }
+
+    .links a{
+      color:#eee;text-decoration:none;margin:0 10px;font-weight:600;
+    }
+    .links a:hover{color:var(--gold)}
+
+    main{
+      max-width:1200px;
+      margin:120px auto 40px;
+      padding:0 16px;
+    }
+
+    .dynasty-section{
+      background:linear-gradient(135deg, rgba(128,0,128,.6), rgba(0,0,128,.5));
+      padding:40px 20px;
+      border-radius:16px;
+      margin-bottom:40px;
+      text-align:center;
+    }
+
+    .dynasty-section h1{
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem,5vw,3rem);
+      font-weight:700;
+      color:var(--gold);
+      text-shadow:2px 2px 10px rgba(0,0,0,.7);
+      margin-bottom:16px;
+    }
+
+    .dynasty-section p{
+      font-size:1.2rem;
+      color:#f0f0f0;
+      font-weight:600;
+    }
+
+    .family-bios{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:24px;
+    }
+
+    .member{
+      background:#1c1c1c;
+      padding:16px;
+      border-radius:16px;
+      text-align:center;
+      box-shadow:0 4px 20px rgba(0,0,0,.4);
+      transition: transform .3s;
+    }
+
+    .member:hover{transform: translateY(-6px);}
+
+    .member img{
+      width:120px;
+      height:120px;
+      object-fit:cover;
+      border-radius:50%;
+      border:3px solid var(--gold);
+      margin-bottom:12px;
+      transition: transform .3s;
+    }
+
+    .member img:hover{transform: scale(1.1);}
+
+    .member h2{
+      font-size:1.2rem;
+      color: var(--blue);
+      margin:8px 0 4px;
+    }
+
+    .member p{
+      font-size:0.95rem;
+      color:#ddd;
+      margin:0;
+    }
+
+    footer{
+      background:#0c0c0c;color:#ddd;text-align:center;padding:28px 16px;border-top:1px solid rgba(255,255,255,.08)
+    }
+
+    @media (max-width:720px){
+      .links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+      .links a{margin:0 6px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="index.html">Okewunmi Dynasty</a>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="family.html">Family</a>
+        <a href="guestbook.html">Guest Book</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Dynasty Info -->
+    <section class="dynasty-section">
+      <h1>The Okewunmi Dynasty</h1>
+      <p>
+        The Okewunmi family has a rich legacy of faith, love, and service to the community.
+        Our dynasty spans generations, preserving traditions and values that strengthen
+        our bond and guide us in serving the Lord with dedication.
+      </p>
+    </section>
+
+    <!-- Family Bios -->
+    <section class="family-bios">
+      <div class="member">
+        <img src="member1.jpg" alt="Elder Okewunmi">
+        <h2>Elder Okewunmi</h2>
+        <p>Patriarch of the family, guiding with wisdom and faith.</p>
+      </div>
+
+      <div class="member">
+        <img src="member2.jpg" alt="Deaconess Okewunmi">
+        <h2>Deaconess Okewunmi</h2>
+        <p>Matriarch of the family, nurturing generations with love.</p>
+      </div>
+
+      <div class="member">
+        <img src="member3.jpg" alt="Damilola Okewunmi">
+        <h2>Damilola Okewunmi</h2>
+        <p>Firstborn, committed to the family's legacy and faith.</p>
+      </div>
+
+      <div class="member">
+        <img src="member4.jpg" alt="Ayomide Okewunmi">
+        <h2>Ayomide Okewunmi</h2>
+        <p>Shining example of youthful leadership in the family.</p>
+      </div>
+
+      <div class="member">
+        <img src="member5.jpg" alt="Abayomi Okewunmi">
+        <h2>Abayomi Okewunmi</h2>
+        <p>Youngest member, bringing fresh energy and inspiration.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Okewunmi Dynasty. All rights reserved.
+  </footer>
+</body>
+  </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guestbook - Okewunmi Dynasty</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+    :root{
+      --gold:#ffd700;
+      --blue:#1e90ff;
+      --purple:#800080;
+      --bg-dark:#111;
+      --text-light:#f0f0f0;
+    }
+
+    body{
+      margin:0;
+      font-family:"Georgia", serif;
+      background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,50,0.9)), url('bible-background.jpg') no-repeat center center/cover;
+      color:var(--text-light);
+    }
+
+    header{
+      position:fixed;top:0;left:0;right:0;z-index:50;
+      backdrop-filter: blur(6px);
+      background:linear-gradient(90deg, rgba(0,0,0,.65), rgba(0,0,0,.35));
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav{
+      max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 18px;
+    }
+
+    .brand{
+      font-family: 'Playfair Display', serif;
+      font-weight:700;
+      font-size:1.6em;
+      letter-spacing:.5px;
+      color:var(--gold);
+      text-decoration:none;
+    }
+
+    .links a{
+      color:#eee;text-decoration:none;margin:0 10px;font-weight:600;
+    }
+    .links a:hover{color:var(--gold)}
+
+    main{
+      margin:120px auto 40px;
+      max-width:800px;
+      padding:0 16px;
+      text-align:center;
+    }
+
+    h1{
+      font-family: 'Playfair Display', serif;
+      font-size:clamp(2rem,5vw,3rem);
+      color:var(--gold);
+      text-shadow: 2px 2px 10px rgba(0,0,0,.7);
+      margin-bottom:20px;
+    }
+
+    iframe{
+      width:100%;
+      height:800px;
+      border:4px solid var(--blue);
+      border-radius:16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.6);
+      background: rgba(0,0,0,0.5);
+    }
+
+    footer{
+      background:#0c0c0c;
+      color:#ddd;
+      text-align:center;
+      padding:28px 16px;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    @media (max-width:720px){
+      .links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+      .links a{margin:0 6px}
+      iframe{height:600px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="index.html">Okewunmi Dynasty</a>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="family.html">Family</a>
+        <a href="guestbook.html">Guest Book</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Leave a Message in Our Guestbook</h1>
+    <!-- Google Form Embed -->
+    <iframe src="YOUR_GOOGLE_FORM_URL_HERE" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </main>
+
+  <footer>
+    &copy; 2025 Okewunmi Dynasty. All rights reserved.
+  </footer>
+</body>
+</html>
