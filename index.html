@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Solomon Okewunmi Family</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+  <title>Okewunmi Dynasty</title>
+  <!-- Google Fonts for headline and verses -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
+  <style>
     :root{
       --gold:#ffd700;
       --burgundy:#8b0000;
@@ -14,11 +15,7 @@
       --ink:#111;
       --ivory:#fffdf7;
       --shadow:0 10px 30px rgba(0,0,0,.25);
-      --blue:#1e90ff;
-      --purple:#800080;
-      --red:#ff0000;
     }
-
     *{box-sizing:border-box}
     body{margin:0;font-family: "Georgia", serif;background:#000;color:#fff}
 
@@ -32,21 +29,13 @@
     .nav{
       max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 18px;
     }
-    .brand{
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8em;
-      font-weight: 700;
-      letter-spacing:.5px;
-      color: var(--gold);
-      text-decoration:none;
-    }
+    .brand{font-weight:700;letter-spacing:.5px;color:var(--gold);text-decoration:none}
     .links a{
       color:#eee;text-decoration:none;margin:0 10px;font-weight:600;
-      transition: color 0.3s;
     }
     .links a:hover{color:var(--gold)}
 
-    /* Hero Slider */
+    /* Hero slider */
     .hero{
       height:100svh; /* mobile-friendly full screen */
       position:relative;overflow:hidden;display:grid;place-items:center;
@@ -55,8 +44,6 @@
       position:absolute;inset:0;display:grid;place-items:center;
       opacity:0;transition:opacity .8s ease;
       background-size:cover;background-position:center;
-      color:#fff;text-align:center;
-      padding:0 12px;
     }
     .slide.active{opacity:1}
     .overlay{
@@ -64,35 +51,51 @@
     }
     .content{
       position:relative;z-index:2;max-width:1000px;margin:0 16px;text-align:center;
-      animation: floatIn .8s ease both;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
     }
 
-    /* Headline above scriptures */
-    .headline{
+    /* Headline */
+    .headline {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight:bold;
-      margin-bottom:16px;
-      color: var(--purple);
-      text-shadow: 2px 2px 12px rgba(0,0,0,.7);
+      font-weight: 700;
+      font-size: clamp(2rem, 6vw, 4rem);
+      color: #ff4b5c;
+      text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+      margin-bottom: 16px;
     }
 
-    .verse{
-      font-size: clamp(1.2rem, 3vw, 2rem);
+    /* Scripture verse */
+    .verse {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1.4rem, 3.5vw, 2.5rem);
       line-height:1.5;
-      text-shadow: 2px 2px 6px #000;
-      color: var(--blue);
+      text-align:center;
+      padding: 0 .25rem;
+      text-shadow: 3px 3px 12px rgba(0,0,0,0.6);
+      background: linear-gradient(90deg, #ff4b5c, #8a2be2, #1e90ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+      animation: verseFade 1s ease-in-out;
+    }
+    @keyframes verseFade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .badge{
-      display:inline-block;margin-top:18px;padding:10px 16px;border-radius:999px;
-      background:rgba(255,215,0,.15);border:1px solid rgba(255,215,0,.35);color:var(--gold);
-      font-weight:700;backdrop-filter: blur(4px)
-    }
-
-    @keyframes floatIn{
-      from{transform:translateY(12px);opacity:0}
-      to{transform:translateY(0);opacity:1}
+    /* Badge */
+    .badge {
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:999px;
+      background: rgba(255,215,0,.15);
+      border: 1px solid rgba(255,215,0,.35);
+      font-weight:700;
+      backdrop-filter: blur(4px);
+      background: linear-gradient(90deg, #ff4b5c, #8a2be2, #1e90ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     /* Footer */
@@ -110,7 +113,7 @@
 <body>
   <header>
     <div class="nav">
-      <a class="brand" href="index.html">Solomon Okewunmi Family</a>
+      <a class="brand" href="index.html">Okewunmi Dynasty</a>
       <nav class="links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -133,165 +136,136 @@
 
   <footer>
     “But as for me and my household, we will serve the Lord.” — Joshua 24:15<br/>
-    &copy; 2025 Solomon Okewunmi Family
+    &copy; 2025 Okewunmi Dynasty
   </footer>
 
   <script>
     const slidesData = [
-      { text: "“Love is patient, love is kind.” — 1 Corinthians 13:4", bg: "url('bible1.jpg')" },
-      { text: "“Train up a child in the way he should go.” — Proverbs 22:6", bg: "url('bible2.jpg')" },
-      { text: "“The fear of the Lord is the beginning of wisdom.” — Proverbs 9:10", bg: "url('bible3.jpg')" },
-      { text: "“Children are a heritage from the Lord.” — Psalm 127:3", bg: "url('bible4.jpg')" },
-      { text: "“Family is the compass that guides us.” — Unknown", bg: "url('bible5.jpg')" }
+      { text: "“Love is patient, love is kind.” — 1 Corinthians 13:4", bg: "url('images/love.jpg')" },
+      { text: "“Train up a child in the way he should go.” — Proverbs 22:6", bg: "url('images/child.jpg')" },
+      { text: "“The fear of the Lord is the beginning of wisdom.” — Proverbs 9:10", bg: "url('images/wisdom.jpg')" },
+      { text: "“Children are a heritage from the Lord.” — Psalm 127:3", bg: "url('images/heritage.jpg')" },
+      { text: "“Family is the compass that guides us.” — Unknown", bg: "url('images/family.jpg')" }
     ];
 
     const slidesHost = document.getElementById('slides');
     const verseBox = document.getElementById('verse');
 
-    slidesData.forEach((s,i)=>{
-      const d=document.createElement('div');
-      d.className='slide'+(i===0?' active':'');
-      d.style.background=s.bg;
+    slidesData.forEach((s, i)=>{
+      const d = document.createElement('div');
+      d.className = 'slide' + (i===0 ? ' active' : '');
+      d.style.background = `linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.65)), ${s.bg}`;
       slidesHost.appendChild(d);
     });
 
-    let idx=0;
+    let idx = 0;
     function show(i){
-      document.querySelectorAll('.slide').forEach(el=>el.classList.remove('active'));
-      document.querySelectorAll('.slide')[i].classList.add('active');
-      verseBox.textContent=slidesData[i].text;
+      const all = document.querySelectorAll('.slide');
+      all.forEach(el => el.classList.remove('active'));
+      all[i].classList.add('active');
+      verseBox.style.opacity = 0;
+      setTimeout(() => {
+        verseBox.textContent = slidesData[i].text;
+        verseBox.style.opacity = 1;
+      }, 300);
     }
-    function next(){ idx=(idx+1)%slidesData.length; show(idx); }
+    function next(){
+      idx = (idx + 1) % slidesData.length;
+      show(idx);
+    }
     show(0);
-    setInterval(next,6000);
+    setInterval(next, 6000);
   </script>
 </body>
 </html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About - Okewunmi Dynasty</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Okewunmi Dynasty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-
-    :root{
-      --gold:#ffd700;
-      --burgundy:#8b0000;
-      --royal:#0b2e59;
-      --blue:#1e90ff;
-      --purple:#800080;
-      --red:#ff0000;
-      --bg-dark:#111;
-      --bg-light:#f8f8f8;
+    body {
+      margin:0;
+      font-family: Georgia, serif;
+      background:#000;
+      color:#fff;
     }
-
-    *{box-sizing:border-box}
-    body{margin:0;font-family: "Georgia", serif;background:var(--bg-dark);color:#fff;line-height:1.6;}
-
-    header{
+    header {
       position:fixed;top:0;left:0;right:0;z-index:50;
       backdrop-filter: blur(6px);
       background:linear-gradient(90deg, rgba(0,0,0,.65), rgba(0,0,0,.35));
       border-bottom:1px solid rgba(255,255,255,.08);
     }
-
     .nav{
       max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 18px;
     }
+    .brand{font-weight:700;letter-spacing:.5px;color:#ffd700;text-decoration:none}
+    .links a{color:#eee;text-decoration:none;margin:0 10px;font-weight:600;}
+    .links a:hover{color:#ffd700}
+    
+    main {
+      padding:100px 20px 40px;
+      max-width:1000px;
+      margin:auto;
+    }
 
-    .brand{
+    h1 {
       font-family: 'Playfair Display', serif;
       font-weight:700;
-      font-size:1.6em;
-      letter-spacing:.5px;
-      color:var(--gold);
-      text-decoration:none;
-    }
-
-    .links a{
-      color:#eee;text-decoration:none;margin:0 10px;font-weight:600;
-    }
-    .links a:hover{color:var(--gold)}
-
-    main{
-      max-width:1200px;
-      margin:120px auto 40px;
-      padding:0 16px;
-    }
-
-    .dynasty-section{
-      background:linear-gradient(135deg, rgba(128,0,128,.6), rgba(0,0,128,.5));
-      padding:40px 20px;
-      border-radius:16px;
-      margin-bottom:40px;
+      font-size: clamp(2rem, 6vw, 3rem);
+      color:#ff4b5c;
+      margin-bottom:20px;
       text-align:center;
+      text-shadow:2px 2px 8px rgba(0,0,0,.6);
     }
 
-    .dynasty-section h1{
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem,5vw,3rem);
+    .dynasty {
       font-weight:700;
-      color:var(--gold);
-      text-shadow:2px 2px 10px rgba(0,0,0,.7);
-      margin-bottom:16px;
-    }
-
-    .dynasty-section p{
       font-size:1.2rem;
-      color:#f0f0f0;
-      font-weight:600;
+      padding:20px;
+      background: url('images/dynasty-bg.jpg') center/cover no-repeat;
+      border-radius:12px;
+      margin-bottom:30px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,.7);
     }
 
-    .family-bios{
-      display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-      gap:24px;
+    .family-member {
+      display:flex;
+      align-items:center;
+      margin-bottom:20px;
+      flex-wrap:wrap;
+      gap:20px;
     }
-
-    .member{
-      background:#1c1c1c;
-      padding:16px;
-      border-radius:16px;
-      text-align:center;
-      box-shadow:0 4px 20px rgba(0,0,0,.4);
-      transition: transform .3s;
-    }
-
-    .member:hover{transform: translateY(-6px);}
-
-    .member img{
-      width:120px;
-      height:120px;
-      object-fit:cover;
+    .family-member img {
+      width:100px;
+      height:100px;
       border-radius:50%;
-      border:3px solid var(--gold);
-      margin-bottom:12px;
-      transition: transform .3s;
+      object-fit:cover;
+      border:3px solid #ff4b5c;
     }
-
-    .member img:hover{transform: scale(1.1);}
-
-    .member h2{
-      font-size:1.2rem;
-      color: var(--blue);
-      margin:8px 0 4px;
+    .member-info {
+      max-width:800px;
     }
-
-    .member p{
-      font-size:0.95rem;
-      color:#ddd;
+    .member-info h3 {
       margin:0;
+      color:#1e90ff;
+      font-weight:700;
+    }
+    .member-info p {
+      margin:4px 0 0 0;
+      color:#eee;
     }
 
     footer{
-      background:#0c0c0c;color:#ddd;text-align:center;padding:28px 16px;border-top:1px solid rgba(255,255,255,.08)
+      background:#0c0c0c;color:#ddd;text-align:center;padding:28px 16px;border-top:1px solid rgba(255,255,255,.08);
+      margin-top:40px;
     }
 
-    @media (max-width:720px){
-      .links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-      .links a{margin:0 6px}
+    @media(max-width:720px){
+      .family-member{flex-direction:column;align-items:center;text-align:center;}
+      .member-info{max-width:100%;}
     }
   </style>
 </head>
@@ -310,165 +284,84 @@
   </header>
 
   <main>
-    <!-- Dynasty Info -->
-    <section class="dynasty-section">
-      <h1>The Okewunmi Dynasty</h1>
-      <p>
-        The Okewunmi family has a rich legacy of faith, love, and service to the community.
-        Our dynasty spans generations, preserving traditions and values that strengthen
-        our bond and guide us in serving the Lord with dedication.
-      </p>
-    </section>
+    <h1>About the Okewunmi Dynasty</h1>
+    <div class="dynasty">
+      The Okewunmi Dynasty is a proud lineage committed to faith, family, and community. Established generations ago, the dynasty stands as a beacon of love, truth, and resilience, inspiring all who know their story.
+    </div>
 
-    <!-- Family Bios -->
-    <section class="family-bios">
-      <div class="member">
-        <img src="member1.jpg" alt="Elder Okewunmi">
-        <h2>Elder Okewunmi</h2>
-        <p>Patriarch of the family, guiding with wisdom and faith.</p>
+    <div class="family-member">
+      <img src="images/elder.jpg" alt="Elder Okewunmi">
+      <div class="member-info">
+        <h3>Elder Okewunmi</h3>
+        <p>Born 1954, a devoted patriarch of the Okewunmi family.</p>
       </div>
+    </div>
 
-      <div class="member">
-        <img src="member2.jpg" alt="Deaconess Okewunmi">
-        <h2>Deaconess Okewunmi</h2>
-        <p>Matriarch of the family, nurturing generations with love.</p>
+    <div class="family-member">
+      <img src="images/deaconess.jpg" alt="Deaconess Okewunmi">
+      <div class="member-info">
+        <h3>Deaconess Okewunmi</h3>
+        <p>Born 1964, a guiding light and matriarch of the family.</p>
       </div>
+    </div>
 
-      <div class="member">
-        <img src="member3.jpg" alt="Damilola Okewunmi">
-        <h2>Damilola Okewunmi</h2>
-        <p>Firstborn, committed to the family's legacy and faith.</p>
+    <!-- Children and grandchildren -->
+    <div class="family-member">
+      <img src="images/child1.jpg" alt="Okewunmi Damilola">
+      <div class="member-info">
+        <h3 style="color:#1e90ff">Okewunmi Damilola</h3>
+        <p>Married in 2018, first born in 2019.</p>
       </div>
-
-      <div class="member">
-        <img src="member4.jpg" alt="Ayomide Okewunmi">
-        <h2>Ayomide Okewunmi</h2>
-        <p>Shining example of youthful leadership in the family.</p>
+    </div>
+    <div class="family-member">
+      <img src="images/child2.jpg" alt="Okewunmi Ayomide">
+      <div class="member-info">
+        <h3 style="color:#1e90ff">Okewunmi Ayomide</h3>
+        <p>Married in February 2023.</p>
       </div>
-
-      <div class="member">
-        <img src="member5.jpg" alt="Abayomi Okewunmi">
-        <h2>Abayomi Okewunmi</h2>
-        <p>Youngest member, bringing fresh energy and inspiration.</p>
+    </div>
+    <div class="family-member">
+      <img src="images/child3.jpg" alt="Okewunmi Abayomi">
+      <div class="member-info">
+        <h3 style="color:#1e90ff">Okewunmi Abayomi</h3>
+        <p>Married in 2023.</p>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 Okewunmi Dynasty. All rights reserved.
+    “But as for me and my household, we will serve the Lord.” — Joshua 24:15<br/>
+    &copy; 2025 Okewunmi Dynasty
   </footer>
 </body>
-  </html>
+</html>
+<div class="family-member">
+  <img src="images/child1.jpg" alt="Okewunmi Damilola">
+  <div class="member-info">
+    <h3 style="color:#1e90ff">Okewunmi Damilola</h3>
+    <p>Married in 2018, first born in 2019.</p>
+  </div>
+</div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Guestbook - Okewunmi Dynasty</title>
+  <title>Guest Book - Okewunmi Dynasty</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-
-    :root{
-      --gold:#ffd700;
-      --blue:#1e90ff;
-      --purple:#800080;
-      --bg-dark:#111;
-      --text-light:#f0f0f0;
-    }
-
-    body{
-      margin:0;
-      font-family:"Georgia", serif;
-      background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,50,0.9)), url('bible-background.jpg') no-repeat center center/cover;
-      color:var(--text-light);
-    }
-
-    header{
-      position:fixed;top:0;left:0;right:0;z-index:50;
-      backdrop-filter: blur(6px);
-      background:linear-gradient(90deg, rgba(0,0,0,.65), rgba(0,0,0,.35));
-      border-bottom:1px solid rgba(255,255,255,.08);
-    }
-
-    .nav{
-      max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 18px;
-    }
-
-    .brand{
-      font-family: 'Playfair Display', serif;
-      font-weight:700;
-      font-size:1.6em;
-      letter-spacing:.5px;
-      color:var(--gold);
-      text-decoration:none;
-    }
-
-    .links a{
-      color:#eee;text-decoration:none;margin:0 10px;font-weight:600;
-    }
-    .links a:hover{color:var(--gold)}
-
-    main{
-      margin:120px auto 40px;
-      max-width:800px;
-      padding:0 16px;
-      text-align:center;
-    }
-
-    h1{
-      font-family: 'Playfair Display', serif;
-      font-size:clamp(2rem,5vw,3rem);
-      color:var(--gold);
-      text-shadow: 2px 2px 10px rgba(0,0,0,.7);
-      margin-bottom:20px;
-    }
-
+    body{margin:0;font-family:Georgia, serif;background:#000;color:#fff;text-align:center;padding:40px;}
+    h1{font-family:'Playfair Display', serif;color:#ff4b5c;margin-bottom:20px;}
     iframe{
-      width:100%;
-      height:800px;
-      border:4px solid var(--blue);
-      border-radius:16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,.6);
-      background: rgba(0,0,0,0.5);
-    }
-
-    footer{
-      background:#0c0c0c;
-      color:#ddd;
-      text-align:center;
-      padding:28px 16px;
-      border-top:1px solid rgba(255,255,255,.08);
-    }
-
-    @media (max-width:720px){
-      .links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-      .links a{margin:0 6px}
-      iframe{height:600px;}
+      width:80%;
+      height:600px;
+      border:none;
+      border-radius:12px;
+      box-shadow:0 8px 20px rgba(0,0,0,.5);
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <a class="brand" href="index.html">Okewunmi Dynasty</a>
-      <nav class="links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="family.html">Family</a>
-        <a href="guestbook.html">Guest Book</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <h1>Leave a Message in Our Guestbook</h1>
-    <!-- Google Form Embed -->
-    <iframe src="YOUR_GOOGLE_FORM_URL_HERE" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </main>
-
-  <footer>
-    &copy; 2025 Okewunmi Dynasty. All rights reserved.
-  </footer>
+  <h1>Sign Our Guest Book</h1>
+  <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true">Loading…</iframe>
 </body>
 </html>
